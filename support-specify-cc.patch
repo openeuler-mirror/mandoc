@@ -1,0 +1,13 @@
+Index: b/configure
+===================================================================
+--- a/configure
++++ b/configure
+@@ -42,7 +42,7 @@ OSNAME=
+ UTF8_LOCALE=
+ 
+ AR=ar
+-CC=cc
++CC=$CC
+ CFLAGS=
+ FATAL=0
+ LDADD=
