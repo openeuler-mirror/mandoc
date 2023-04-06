@@ -1,14 +1,16 @@
 Name:             mandoc
 Version:          1.14.6
-Release:          1
+Release:          2
 Summary:          A suite of tools for compiling mdoc and man
 
 License:          ISC
 URL:              https://mandoc.bsd.lv/
 Source0:          https://mandoc.bsd.lv/snapshots/mandoc-%{version}.tar.gz
+Patch0:           0001-add-compile-option.patch
 
 BuildRequires:    gcc
 BuildRequires:    make
+BuildRequires:    clang
 BuildRequires:    zlib-devel
 
 # requirements for %%check
@@ -69,6 +71,7 @@ echo 'INSTALL_DATA="${INSTALL} -m 0644"'    >> configure.local
 echo 'INSTALL_LIBMANDOC=1' >> configure.local
 
 echo 'CFLAGS="%{optflags} -fPIC"' >> configure.local
+export CC=clang
 ./configure
 %make_build
 
@@ -217,6 +220,8 @@ fi
 %{_mandir}/man3/tbl.3*
 
 %changelog
+* Thu Apr 6 2023 changzhangm <chaozhangm@isoftstone.com> - 1.14.6-2
+- Update to 1.14.6-2
 * Fri Sep 23 2022 chendexi <chendexi@kylinos.cn> - 1.14.6-1
 - Initial package
 

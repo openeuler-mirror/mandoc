@@ -1,0 +1,25 @@
+From b67c8c1b249046b92966b0ad7768c07cbad59445 Mon Sep 17 00:00:00 2001
+From: zhangchao13 <chaozhangm@isoftstone.com>
+Date: Thu, 6 Apr 2023 14:48:07 +0800
+Subject: [PATCH] fix
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index 5cf4e08..b8566dd 100644
+--- a/configure
++++ b/configure
+@@ -42,7 +42,7 @@ OSNAME=
+ UTF8_LOCALE=
+ 
+ AR=ar
+-CC=cc
++CC=$CC
+ CFLAGS=
+ FATAL=0
+ LDADD=
+-- 
+2.39.2.windows.1
+
