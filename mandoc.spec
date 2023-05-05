@@ -6,6 +6,7 @@ Summary:          A suite of tools for compiling mdoc and man
 License:          ISC
 URL:              https://mandoc.bsd.lv/
 Source0:          https://mandoc.bsd.lv/snapshots/mandoc-%{version}.tar.gz
+Patch0:           support-specify-cc.patch
 
 BuildRequires:    gcc
 BuildRequires:    make
